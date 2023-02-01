@@ -1,0 +1,13 @@
+.link {
+    @apply text-indigo-600;
+}
+.link:hover {
+    @apply text-indigo-900;
+}
+
+.link-underline {
+    @apply underline;
+}
+.link-underline:hover {
+    @apply text-indigo-600;
+}

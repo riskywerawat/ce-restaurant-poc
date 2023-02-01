@@ -1,0 +1,16 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Chrome */
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.trade-form-label {
+    @apply font-bold block w-full text-sm text-kimberly-inactive mb-1;
+}
+
+.form-input-error, .form-input-error:focus {
+    @apply border-accent-red;
+}

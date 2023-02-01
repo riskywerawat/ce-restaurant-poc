@@ -1,2 +1,6 @@
-# ce-restaurant-poc
- restaurant management system.
+
+1) npm install
+
+2) composer update
+
+3) npm run admin-

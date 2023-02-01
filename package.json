@@ -1,0 +1,42 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env process.env.section=main NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env process.env.section=main NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env process.env.section=main NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "admin-dev": "npm run admin-development",
+        "admin-development": "cross-env process.env.section=admin NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "admin-watch": "npm run admin-development -- --watch",
+        "admin-watch-poll": "npm run admin-watch -- --watch-poll",
+        "admin-hot": "cross-env process.env.section=admin NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "admin-prod": "npm run admin-production",
+        "admin-production": "cross-env process.env.section=admin NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "@tailwindcss/ui": "^0.6.2",
+        "apexcharts": "^3.22.0",
+        "axios": "^0.20",
+        "cross-env": "^7.0",
+        "dayjs": "^1.9.1",
+        "laravel-echo": "^1.9.0",
+        "laravel-mix": "^5.0.1",
+        "laravel-mix-merge-manifest": "^0.1.2",
+        "postcss-import": "^12.0.1",
+        "puppeteer": "^5.5.0",
+        "pusher-js": "^7.0.0",
+        "resolve-url-loader": "^3.1.0",
+        "tailwindcss": "^1.8.7",
+        "tippy.js": "^6.2.7",
+        "v-money": "^0.8.1",
+        "vue": "^2.6.11",
+        "vue-apexcharts": "^1.6.0",
+        "vue-currency-input": "^1.22.3",
+        "vue-template-compiler": "^2.6.12",
+        "vuelidate": "^0.7.5",
+        "v-calendar": "^1.0.8"
+    }
+}

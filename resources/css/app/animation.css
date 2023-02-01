@@ -1,0 +1,12 @@
+.transition-fast {
+    transition: 0.2s all ease-in-out;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.4s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}

@@ -1,0 +1,5 @@
+.breadcrumb svg {
+    @apply text-gray-600 inline-block fill-current;
+    width: 12px;
+    height: 12px;
+}

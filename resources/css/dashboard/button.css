@@ -1,0 +1,57 @@
+.button {
+    @apply border-2 border-transparent text-gray-800 text-sm font-medium rounded-md py-2 px-4 transition duration-150 ease-in-out;
+}
+.button:focus {
+    @apply outline-none shadow-outline;
+}
+
+.button.button-small {
+    @apply text-xs font-light py-1 px-2;
+}
+
+.button.button-primary {
+    @apply bg-purple-600 text-white;
+}
+.button.button-primary:hover {
+    @apply bg-purple-500;
+}
+.button.button-primary:focus {
+    @apply border-purple-700 shadow-outline-purple;
+}
+.button.button-primary:active {
+    @apply bg-purple-700;
+}
+
+.button.button-outline {
+    @apply border-purple-600 text-purple-600;
+}
+.button.button-outline:hover {
+    @apply bg-purple-600 text-white;
+}
+
+.button.button-outline-danger {
+    @apply border-red-600 text-red-700;
+}
+.button.button-outline-danger:hover {
+    @apply bg-red-600 text-white;
+}
+
+.button.button-success {
+    @apply bg-green-600 text-white;
+}
+.button.button-success:hover {
+    @apply bg-green-700;
+}
+.button.button-danger {
+    @apply bg-red-700 text-white;
+}
+.button.button-danger:hover {
+    @apply bg-red-800;
+}
+
+.button-small {
+    @apply text-xs font-light py-1 px-2;
+}
+.button-big {
+    @apply text-xl py-3 px-5;
+}

@@ -1,0 +1,28 @@
+.page-container {
+    @apply max-w-7xl mx-auto px-4;
+}
+@screen sm {
+    .page-container {
+        @apply px-6;
+    }
+}
+@screen lg {
+    .page-container {
+        @apply px-8;
+    }
+}
+
+.form-container {
+    @apply max-w-7xl mx-auto;
+}
+@screen sm {
+    .form-container {
+        @apply px-6;
+    }
+}
+@screen lg {
+    .form-container {
+        @apply px-8;
+    }
+}
+

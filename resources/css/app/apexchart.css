@@ -1,0 +1,23 @@
+.apexcharts-toolbar {
+    z-index: 9 !important;
+}
+.apexcharts-tooltip {
+    color: #E1E1EF !important;
+}
+.apexcharts-tooltip.apexcharts-theme-dark {
+    background: rgba(20, 20, 56, 0.9) !important;
+    box-shadow: none;
+}
+.apexcharts-tooltip-title {
+    background: rgba(10, 10, 40, 0.9) !important;
+}
+.apexcharts-theme-dark .apexcharts-menu {
+    background: rgba(20, 20, 56, 0.9) !important;
+    color: #E1E1EF !important;
+    border-color: #313159 !important;
+}
+.apexcharts-xaxistooltip.apexcharts-theme-dark {
+    background: rgba(20, 20, 56, 0.9) !important;
+    color: #E1E1EF !important;
+    border-color: #313159 !important;
+}

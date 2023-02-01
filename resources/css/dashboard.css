@@ -1,0 +1,19 @@
+/* Reset */
+@import 'tailwindcss/base';
+@import "dashboard/base.css";
+
+@import "dashboard/layouts.css";
+@import "dashboard/nav.css";
+/* Pages */
+
+/* Components */
+@import 'tailwindcss/components';
+@import "dashboard/link.css";
+@import "dashboard/button.css";
+@import "dashboard/breadcrumb.css";
+@import "dashboard/table.css";
+@import "dashboard/data-list.css";
+@import "dashboard/form.css";
+
+/* Utilities */
+@import 'tailwindcss/utilities';

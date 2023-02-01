@@ -1,0 +1,29 @@
+.request-list-item {
+    @apply dark:bg-slate-800 px-4 py-2 text-kimberly-primary text-sm grid grid-cols-3;
+    margin-bottom: 0.125rem;
+}
+.request-list-item.alternate {
+    @apply bg-midnight-dark2;
+}
+
+.my-offer-list-item {
+    @apply dark:bg-slate-800 px-4 py-3 text-kimberly-primary text-sm;
+    margin-bottom: 0.125rem;
+}
+
+.market-mobile-nav {
+    @apply block py-4 text-kimberly-link transition ease-in-out duration-150;
+}
+.market-mobile-nav.active {
+    @apply dark:bg-slate-800 text-kimberly-primary;
+}
+.market-mobile-nav:not(.active):hover {
+    @apply text-kimberly-primary;
+}
+
+.mobile-bids-asks-panel .bid_ask_panel_header {
+    @apply bg-midnight-darker text-center cursor-pointer;
+}
+.desktop-bids-asks-panel .bid_ask_panel_header {
+    @apply bg-midnight-dark;
+}

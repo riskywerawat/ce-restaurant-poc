@@ -1,0 +1,23 @@
+/* Reset */
+@import 'tailwindcss/base';
+@import "app/base.css";
+@import "app/animation.css";
+
+
+
+/* Components */
+@import 'tailwindcss/components';
+@import "app/nav.css";
+@import "app/form.css";
+@import "app/button.css";
+@import "app/link.css";
+/* purgecss start ignore */
+@import "app/apexchart.css";
+/* purgecss end ignore */
+
+/* Pages */
+@import "app/market.css";
+@import "app/history.css";
+
+/* Utilities */
+@import 'tailwindcss/utilities';

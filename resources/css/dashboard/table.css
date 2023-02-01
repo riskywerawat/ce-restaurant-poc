@@ -1,0 +1,29 @@
+.table-stripe tbody tr {
+    @apply bg-white;
+}
+.table-stripe tbody tr:nth-child(even) {
+    @apply bg-gray-50;
+}
+
+.table th {
+    @apply px-6 py-3 border-b border-gray-200 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider;
+}
+.table tbody td {
+    @apply px-6 py-4 whitespace-no-wrap text-sm leading-5;
+}
+.table-link-primary {
+    @apply text-gray-900 font-medium;
+}
+.table-link-primary:hover {
+    @apply text-indigo-900;
+}
+
+.table-link-secondary {
+    @apply text-gray-500;
+}
+.table-link-secondary:hover {
+    @apply text-gray-600;
+}
+.table .link {
+    @apply font-medium;
+}

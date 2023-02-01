@@ -1,0 +1,20 @@
+html, body {
+    @apply font-sans font-normal text-kimberly-primary w-full h-full m-0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+::selection {
+    background: theme('colors.highlight');
+    color: theme('colors.kimberly.default');
+}
+
+[v-cloak], [x-cloak] {
+    display: none !important;
+}

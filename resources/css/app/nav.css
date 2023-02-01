@@ -1,0 +1,33 @@
+.nav-link {
+    @apply flex items-center px-2 py-2 text-sm leading-5 font-medium rounded-md transition ease-in-out duration-150;
+}
+.nav-link:focus, .nav-link-mobile:focus {
+    @apply outline-none bg-midnight-darker;
+}
+.nav-link.inactive:focus, .nav-link-mobile.inactive:focus {
+    @apply text-white
+}
+.nav-link.active, .nav-link-mobile.active {
+    @apply text-white bg-midnight-darkest;
+}
+.nav-link.inactive, .nav-link-mobile.inactive {
+    @apply text-gray-300;
+}
+.nav-link.inactive:hover, .nav-link-mobile.inactive:hover {
+    @apply text-white bg-blue-100;
+}
+
+.nav-link-mobile {
+    @apply flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md transition ease-in-out duration-100;
+}
+
+.top-nav-link {
+    @apply mx-2 px-3 flex items-center h-full border-transparent text-kimberly-inactive text-sm whitespace-no-wrap transition ease-in-out duration-100;
+    border-bottom-width: 3px;
+}
+.top-nav-link.active {
+    @apply border-highlight text-kimberly-primary;
+}
+.top-nav-link:not(.active):hover, .top-nav-link:not(.active):focus {
+    @apply dark:bg-slate-800 text-kimberly-primary;
+}

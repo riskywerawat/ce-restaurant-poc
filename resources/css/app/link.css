@@ -1,0 +1,6 @@
+.link {
+    @apply text-kimberly-link transition ease-in-out duration-100;
+}
+.link:hover {
+    @apply text-kimberly-primary;
+}

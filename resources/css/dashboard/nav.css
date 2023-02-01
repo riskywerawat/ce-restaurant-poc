@@ -1,0 +1,22 @@
+.nav-link {
+    @apply flex items-center px-2 py-2 text-sm leading-5 font-medium rounded-md transition ease-in-out duration-150;
+}
+.nav-link:focus, .nav-link-mobile:focus {
+    @apply outline-none bg-midnight-darker;
+}
+.nav-link.inactive:focus, .nav-link-mobile.inactive:focus {
+    @apply text-white
+}
+.nav-link.active, .nav-link-mobile.active {
+    @apply text-white bg-blue-900;
+}
+.nav-link.inactive, .nav-link-mobile.inactive {
+    @apply text-gray-300;
+}
+.nav-link.inactive:hover, .nav-link-mobile.inactive:hover {
+    @apply text-black bg-gray-100;
+}
+
+.nav-link-mobile {
+    @apply flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md transition ease-in-out duration-150;
+}
