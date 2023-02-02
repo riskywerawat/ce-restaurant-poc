@@ -23,8 +23,6 @@ Route::group(['middleware' => ['auth.dashboard']], function () {
     Route::post('users/{user}/reset-password', [UserNotificationController::class, 'sendResetPassword'])->name('dashboard.users.reset.password');
     Route::post('users/{user}/reset-pin', [UserNotificationController::class, 'sendResetPin'])->name('dashboard.users.reset.pin');
 
-    Route::get('transactions', [TransactionController::class, 'index'])->name('dashboard.transactions.index');
-    Route::get('transactions/{transaction}', [TransactionController::class, 'show'])->name('dashboard.transactions.show');
 
     Route::get('orders', [OrderRequestController::class, 'index'])->name('dashboard.order_request.index');
     Route::get('orders/create', [OrderRequestController::class, 'create'])->name('dashboard.order_request.create');
@@ -39,7 +37,7 @@ Route::group(['middleware' => ['auth.dashboard']], function () {
     Route::get('orders/{id}', [OrderRequestController::class, 'show'])->name('dashboard.order_request.show');
 
 
- 
+
     Route::get('settings/profile', [\App\Http\Controllers\Dashboard\SettingsController::class, 'profile'])->name('dashboard.settings.profile');
     Route::post('settings/profile', [\App\Http\Controllers\Dashboard\SettingsController::class, 'updateProfile'])->name('dashboard.settings.profile.update');
     Route::post('settings/password', [\App\Http\Controllers\Dashboard\SettingsController::class, 'updatePassword'])->name('dashboard.settings.password.update');
