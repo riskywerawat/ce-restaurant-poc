@@ -22,7 +22,7 @@
             {{--</div>--}}
             <div class="mt-8 border-t border-gray-200 pt-5">
                 <div class="flex justify-end">
-                    <button type="submit" class="button button-primary flex">
+                    <button type="submit" class="button text-white bg-gray-700 inline-flex items-center">
                         @include('dashboard._partials.icon_save')
                         {{ $pageTitle }}
                     </button>

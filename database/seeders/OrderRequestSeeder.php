@@ -15,11 +15,10 @@ class OrderRequestSeeder extends Seeder
      */
     public function run()
     {
-        $arr =     [[1],[1], [2],[2],[3],[3]];
+        $arr =     [[1],[2]];
         foreach ($arr as $i) {
             $menu = new OrderRequest();
             $menu->kitchen_id = $i[0];
-            $menu->order_time = Carbon::now();
             $menu->save();
         }
     }

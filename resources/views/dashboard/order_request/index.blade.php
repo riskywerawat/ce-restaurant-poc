@@ -47,7 +47,7 @@
                     {{--</select>--}}
                 {{--</div>--}}
                 {{--<div class="w-full px-2 text-right">--}}
-                    {{--<button class="button button-primary inline-flex items-center" type="submit">@include('dashboard._partials.icon_filter') Filter</button>--}}
+                    {{--<button class="button text-white bg-gray-700 inline-flex items-center" type="submit">@include('dashboard._partials.icon_filter') Filter</button>--}}
                 {{--</div>--}}
             {{--</form>--}}
         {{--</div>--}}
@@ -62,13 +62,17 @@
                         <th class="text-left">
                             {{ trans('dashboard/order_request.form.kitchen') }}
                         </th>
-                        <th class="text-left">
+                        <th class="text-center">
                             {{ trans('dashboard/order_request.form.status') }}
+                        </th>
+                        <th class="text-center">
+                            Time Spend (MINUTE)
                         </th>
                         <th class="text-left">
                             {{ trans('dashboard/order_request.form.order_at') }}
                         </th>
-                        <th class=""></th>
+                        <th class="text-left"></th>
+
                     </tr>
                 </x-slot>
 
@@ -80,14 +84,36 @@
                         <td class="">
                             <a href="{{ $order->dashboardUrl() }}" class="table-link-secondary">{{ $order->present()->name }}</a>
                         </td>
-                        <td class="">
-                            <a href="{{ $order->dashboardUrl() }}" class="table-link-secondary">{{ $order->present()->status }}</a>
+                        <td class="text-center">
+                            <a href="{{ $order->dashboardUrl() }}" class="table-link-secondary">
+                            <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full">{{ $order->present()->status === 1 ? "Pending" : "Completed" }}</span>
+                            </a>
+                        </td>
+                        <td class="text-center">
+
+                            <a href="{{ $order->dashboardUrl() }}" class="">{{$order->getDiffMinute($order->created_at)}}</a>
                         </td>
                         <td class="">
-                            <a href="{{ $order->dashboardUrl() }}" class="">{!! $order->present()->order_time !!}</a>
+
+                            <a href="{{ $order->dashboardUrl() }}" class="">{!! $order->created_at !!}</a>
                         </td>
                         <td class="text-right">
-                            <a href="{{ $order->dashboardUrlEdit() }}" class="link">{{ __('common.edit') }}</a>
+
+
+
+                            <div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <a class="" href="{{ route('dashboard.order_request.edit', $order->id) }}">
+                                        @include('dashboard._partials.icon_edit')
+                                     </a>
+                                    <!-- ... -->
+                                    <a class="" href="{{ route('dashboard.order_request.show', $order->id) }}">
+                                        @include('dashboard._partials.icon_order')
+                                     </a>
+                                  </div>
+
+
+                            </div>
                         </td>
                     </tr>
                 @endforeach

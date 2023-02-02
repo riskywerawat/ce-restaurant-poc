@@ -28,16 +28,18 @@ Route::group(['middleware' => ['auth.dashboard']], function () {
 
     Route::get('orders', [OrderRequestController::class, 'index'])->name('dashboard.order_request.index');
     Route::get('orders/create', [OrderRequestController::class, 'create'])->name('dashboard.order_request.create');
+    Route::post('orders/create', [OrderRequestController::class, 'store'])->name('dashboard.order_request.store');
+
+    Route::get('orders/{order}/edit', [OrderRequestController::class, 'edit'])->name('dashboard.order_request.edit');
+    // Route::get('orders/{order}', [OrderRequestController::class, 'show'])->name('dashboard.users.show');
+    Route::patch('orders/{order}', [OrderRequestController::class, 'update'])->name('dashboard.order_request.update');
+
+    Route::delete('orders/{order}', [OrderRequestController::class, 'destroy'])->name('dashboard.order_request.destroy');
 
     Route::get('orders/{id}', [OrderRequestController::class, 'show'])->name('dashboard.order_request.show');
 
 
-    Route::get('bid-requests/{bidRequest}', [BidRequestController::class, 'show'])->name('dashboard.bid_requests.show');
-    Route::get('ask-requests/{askRequest}', [AskRequestController::class, 'show'])->name('dashboard.ask_requests.show');
-
-    Route::get('site-settings', [\App\Http\Controllers\Dashboard\SiteSettingsController::class, 'edit'])->name('dashboard.site_settings.edit');
-    Route::post('site-settings', [\App\Http\Controllers\Dashboard\SiteSettingsController::class, 'update'])->name('dashboard.site_settings.update');
-
+ 
     Route::get('settings/profile', [\App\Http\Controllers\Dashboard\SettingsController::class, 'profile'])->name('dashboard.settings.profile');
     Route::post('settings/profile', [\App\Http\Controllers\Dashboard\SettingsController::class, 'updateProfile'])->name('dashboard.settings.profile.update');
     Route::post('settings/password', [\App\Http\Controllers\Dashboard\SettingsController::class, 'updatePassword'])->name('dashboard.settings.password.update');

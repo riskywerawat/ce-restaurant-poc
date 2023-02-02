@@ -20,18 +20,23 @@
         {{--</div>--}}
         @include('dashboard._partials.formfield_left_label', [
             'label' => trans('dashboard/order_request.form.kitchen'), 'name' => 'kitchen', 'type' => 'dropdown',
-            'dropdownList'=> [],
-            'value'=> old('company', ""),
+            'dropdownList'=> $dropdownListKitchen,
+            'value'=> old('kitchen', $orders->kitchen_id),
             'required' => true
             ])
 
-        @include('dashboard._partials.formfield_left_label', [
-            'label' => trans('dashboard/order_request.form.name'), 'name' => 'name', 'type' => 'text', 'value' => old('name', ""),
-            'required' => true
-        ])
+@include('dashboard._partials.formfield_left_label', [
+    'label' => trans('dashboard/order_request.form.menu'), 'name' => 'menus', 'type' => 'dropdown',
+    'dropdownList'=> $dropdownMenus,
+    'value'=> old('menus', $orders->menu_id),
+    'required' => true
+    ])
 
-        @include('dashboard._partials.formfield_left_label', [
-            'label' => trans('dashboard/order_request.form.name'), 'name' => 'email', 'type' => 'email', 'value' => old('email', ""),
+
+
+    @include('dashboard._partials.formfield_left_label', [
+            'label' => trans('dashboard/order_request.form.quantity'),
+             'name' => 'quantity', 'type' => 'number', 'value' => old('quantity', $orders->quantity),
             'required' => true
         ])
 

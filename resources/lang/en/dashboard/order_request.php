@@ -5,7 +5,7 @@ return [
 
     'page_title' => [
         'index'     => 'All Orders',
-      'create'    => 'Create Orders',
+        'create'    => 'Create Orders',
         'edit'      => 'Edit Orders',
         'delete'    => 'Delete Orders',
         'show'      => 'Orders: ',
@@ -18,7 +18,7 @@ return [
     ],
     'form' => [
         'profile_information_title' => 'Profile',
-        'profile_information_description' => 'Profile information, contact detail',
+        'profile_information_description' => 'Kitchen information, menu detail',
         'name'                  => 'Name',
         'email'                 => 'Email',
         'role'                  => 'Role',
@@ -36,6 +36,8 @@ return [
         'seller_description'    => 'User can sell order',
         'id'         => 'Order ID',
         'kitchen'                 => 'Kitchen',
+        'menu'                 => 'Menu',
+        'quantity'                 => 'Quantity',
         'status'              => 'Status',
         'order_at' => 'Order Time',
     ],

@@ -113,25 +113,9 @@ class UserController extends Controller
     {
         $this->authorize('view', $user);
 
-        $transactions = Transaction::with(['askRequest.user', 'bidRequest.user'])
-            ->whereHas('bidRequest', function ($q) use($user) {
-                $q->where('user_id', $user->id);
-            })
-            ->orWhereHas('askRequest', function ($q) use($user) {
-                $q->where('user_id', $user->id);
-            })
-            ->orderByDesc('delivery_date')
-            ->paginate(50, ['*'], 'transactions_page');
 
-        $bidRequests = BidRequest::where('user_id', $user->id)
-            ->orderByDesc('delivery_date')
-            ->paginate(50, ['*'], 'bid_requests_page');
 
-        $askRequests = AskRequest::where('user_id', $user->id)
-            ->orderByDesc('delivery_date')
-            ->paginate(50, ['*'], 'ask_requests_page');
-
-        return view('dashboard.users.show', compact('user', 'transactions', 'bidRequests', 'askRequests'));
+        return view('dashboard.users.show', compact('user'));
     }
 
     /**

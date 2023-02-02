@@ -12,7 +12,7 @@
             <x-slot name="title">{{ trans('dashboard/user.page_title.show') }} {{ $user->name }}</x-slot>
             <x-slot name="actions">
                 @can('update', $user)
-                    <a class="button button-primary flex items-center" href="{{ route('dashboard.users.edit', $user) }}">
+                    <a class="button text-white bg-gray-700 inline-flex items-center" href="{{ route('dashboard.users.edit', $user) }}">
                         @include('dashboard._partials.icon_edit')
                         {{ __('common.edit') }}</a>
                 @endcan
@@ -85,18 +85,8 @@
             {{--</x-slot>--}}
         {{--</x-table-advanced>--}}
 
-        <h2 class="text-xl mb-4">Transactions</h2>
-        @include('dashboard.transactions._list_dump')
 
-        @if(count($bidRequests) || $user->isBuyer())
-            <h2 class="text-xl mb-4 mt-6">Bid Requests</h2>
-            @include('dashboard.bid_requests._list')
-        @endif
 
-        @if(count($askRequests) || $user->isSeller())
-            <h2 class="text-xl mb-4 mt-6">Offer Requests</h2>
-            @include('dashboard.ask_requests._list')
-        @endif
     </div>
 @endsection
 

@@ -3,27 +3,37 @@
 namespace App\Models;
 
 use App\Traits\Presentable;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
 class OrderRequest extends Model
 {
-    use HasFactory,Presentable;
+    use HasApiTokens;
+    use HasFactory;
+
+
+    use HasRoles, Presentable;
     protected $presenter = \App\Presenters\RolePresenter::class;
     public function kitchen()
     {
         return $this->belongsTo(Kitchen::class);
     }
-    public function scopeActive($query)
-    {
-        return $query->where('status', AskRequest::STATUS_ACTIVE);
-    }
+
     public function dashboardUrl()
     {
-        return route('dashboard.order_request.show', 1);
+        return route('dashboard.order_request.show', $this->id);
     }
-    public function dashboardUrlEdit()
+
+    public function getDiffMinute($time)
     {
-        return route('dashboard.users.edit', 1);
+        $timeNow = Carbon::now();
+        $diff_in_minutes = $timeNow->diffInMinutes($time);
+        error_log($timeNow);
+        error_log($time);
+        error_log($diff_in_minutes);
+        return $diff_in_minutes;
     }
 }

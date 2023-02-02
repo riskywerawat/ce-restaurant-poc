@@ -10,7 +10,7 @@
     <div class="form-container mx-auto my-6">
         <h1 class="text-2xl px-4 sm:px-0">{{ $pageTitle }}</h1>
         <form class="bg-white shadow px-4 py-5 sm:rounded-lg sm:px-6 my-6" method="post"
-              action="{{ route('dashboard.users.store') }}">
+              action="{{ route('dashboard.order_request.create') }}">
             @csrf
             <div>
                 @include('dashboard.order_request._form')
@@ -22,7 +22,7 @@
             {{--</div>--}}
             <div class="mt-8 border-t border-gray-200 pt-5">
                 <div class="flex justify-end">
-                    <button type="submit" class="button button-primary flex">
+                    <button type="submit" class="button text-white bg-gray-700 flex">
                         @include('dashboard._partials.icon_save')
                         {{ $pageTitle }}
                     </button>

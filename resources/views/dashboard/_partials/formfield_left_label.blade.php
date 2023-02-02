@@ -44,8 +44,10 @@
                 </select>
                 @endif --}}
 
-          @else
+
+            @else
             <input id="{{ $id ?? $name }}" name="{{ $name }}" type="{{ $type ?? 'text' }}"
+                   @if(isset($default)) value="{{ $default }}" @endif
                    @if(isset($value)) value="{{ $value }}" @endif
                    @if(isset($placeholder) && $placeholder) placeholder="{{ $placeholder }}" @endif
                    @if(isset($required) && $required) required @endif

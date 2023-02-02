@@ -15,7 +15,7 @@ class OrderItemSeeder extends Seeder
     public function run()
     {
         //
-        $arr =     [[1,3,2],[1,2,1]];
+        $arr =     [[1,3,2],[2,2,1]];
         foreach ($arr as $i) {
             $items = new OrderItem();
             $items->order_request_id = $i[0];

@@ -17,7 +17,7 @@
                 @endif
             </h1>
             @can('create', App\Models\User::class)
-            <a href="{{ route('dashboard.users.create') }}" class="button button-primary inline-flex items-center">
+            <a href="{{ route('dashboard.users.create') }}" class="button text-white bg-gray-700 inline-flex items-center">
             <svg class="fill-current w-4 h-4 inline-block mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M11 9V5H9v4H5v2h4v4h2v-4h4V9h-4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"/></svg>
             {{ trans('dashboard/user.page_title.create') }}</a>
             @endcan
@@ -47,7 +47,7 @@
                     {{--</select>--}}
                 {{--</div>--}}
                 {{--<div class="w-full px-2 text-right">--}}
-                    {{--<button class="button button-primary inline-flex items-center" type="submit">@include('dashboard._partials.icon_filter') Filter</button>--}}
+                    {{--<button class="button text-white bg-gray-700 inline-flex items-center" type="submit">@include('dashboard._partials.icon_filter') Filter</button>--}}
                 {{--</div>--}}
             {{--</form>--}}
         {{--</div>--}}

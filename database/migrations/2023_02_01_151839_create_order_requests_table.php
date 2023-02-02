@@ -23,7 +23,6 @@ class CreateOrderRequestsTable extends Migration
             ->onDelete('cascade');
 
             $table->unsignedTinyInteger('status')->default(1); // enum
-            $table->date('order_time');
             $table->timestamps();
         });
     }
