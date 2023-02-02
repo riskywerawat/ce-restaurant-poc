@@ -17,5 +17,5 @@
 
 8) account superadmin@RMS.com , nge1717nge
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/table_entity.PNG?raw=true)
+![alt text](https://github.com/riskywerawat/ce-restaurant-poc/blob/main/table_entity.PNG?raw=true)
 
