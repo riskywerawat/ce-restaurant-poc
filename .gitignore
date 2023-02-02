@@ -11,8 +11,7 @@
 /public/js/public/vendor.js
 /storage/*.key
 /vendor
-.env
-.env.backup
+
 .idea/
 .phpunit.result.cache
 Homestead.json
